@@ -17,11 +17,6 @@ export const Section1 = () => {
     >(dummyProductImages);
     const [loading, setLoading] = useState(false);
 
-    const handleDescriptionChange = (desc: string) => {
-        console.log('🚀 ~ handleDescriptionChange ~ desc:', desc);
-        setProductDescriptionInput(desc);
-    };
-
     useEffect(() => {
         if (!pastedURL || pastedURL === '') {
             setImages(dummyProductImages);

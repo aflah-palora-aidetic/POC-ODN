@@ -34,14 +34,6 @@ export const dummyProductImages = [
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZKH3bEvIRpMu65iNDTirFTfi4HK9IZ2-hvTzvbo0A7M4KVTQO3CNprfK5CQqBmE81_f8&usqp=CAU',
         title: 'dummy-3',
     },
-    // {
-    //     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZKH3bEvIRpMu65iNDTirFTfi4HK9IZ2-hvTzvbo0A7M4KVTQO3CNprfK5CQqBmE81_f8&usqp=CAU',
-    //     title: 'dummy-4',
-    // },
-    // {
-    //     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZKH3bEvIRpMu65iNDTirFTfi4HK9IZ2-hvTzvbo0A7M4KVTQO3CNprfK5CQqBmE81_f8&usqp=CAU',
-    //     title: 'dummy-5',
-    // },
 ];
 
 export type AIAvatar = {
@@ -74,15 +66,21 @@ export const avatarImages = [
 ];
 
 export const productDescription = `
-  Multicolored georgette resort dress
+Product: PRETTY LOVING THING 
+Women A-line Multicolor Dress
 
-  Tie on detail at the front
-  
-  Maxi length
-  
-  Noodle straps
-  
-  Side slits for ease of walking
+Color: Multicolor
+Length: Maxi/Full Length
+Fabric: Viscose Rayon
+Pattern: Printed
+Ideal For: Women
+Type: A-line
+Style Code: PLTDR150MULTI
+Suitable For: Western Wear
+Sleeve Length: Sleeveless
+Pack of: 1
+Neck: One Shoulder
+Sleeve: Noodle strap
   `;
 
 export const productScript = `
