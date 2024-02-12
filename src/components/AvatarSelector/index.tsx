@@ -30,6 +30,8 @@ export const SelectableImageList: FC<{
                         '&:hover': {
                             backgroundColor: '#bbc9ff',
                         },
+                        height: '200px',
+                        objectFit: 'cover'
                     }}
                 >
                     <Box

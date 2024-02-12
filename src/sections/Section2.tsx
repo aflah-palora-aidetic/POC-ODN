@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Grid, Paper, Typography } from '@mui/material';
+import { Box, Grid, Paper, Typography } from '@mui/material';
 import { avatarImages, productScript } from '../constants';
 import { MinHeightTextarea } from '../components/DescriptionComponent';
 import { SelectableImageList } from '../components/AvatarSelector';
 import { useEffect, useState } from 'react';
 import { CustomizedSteppers } from '../components/Stepper';
-import video from '../assets/video.mp4';
+// import vidAv1 from '../assets/av1_vid.webm'
+// import vidAv2 from '../assets/av2_vid.webm'
+import vidAv3 from '../assets/av3_vid.webm'
+// import imgAv1 from '../assets/av1.png'
+// import imgAv2 from '../assets/av2.jpg'
 
 export const Section2 = () => {
     const [selectedImage, setSelectedImage] = useState<string>('');
@@ -18,7 +22,7 @@ export const Section2 = () => {
     useEffect(() => {
         setTimeout(() => {
             setScript(productScript);
-        }, 500);
+        }, 2500);
     }, []);
 
     return (
@@ -33,7 +37,7 @@ export const Section2 = () => {
                 container
                 flexGrow={1}
                 flexWrap={'nowrap'}
-                gap={1}
+                // gap={1}
                 sx={{
                     overflow: 'auto',
                     scrollbarWidth: 'thin', // For Firefox
@@ -107,7 +111,7 @@ export const Section2 = () => {
                     >
                         <MinHeightTextarea
                             value={script}
-                            placeholder='Generating script...'
+                            placeholder='Generating the script...'
                             minRows={20}
                         />
                     </Grid>
@@ -126,9 +130,12 @@ export const Section2 = () => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
+                            height: '100%',
+                            overflow: 'hidden',
                         }}
                     >
-                        <video
+                        <Box
+                            component={'video'}
                             autoPlay
                             loop
                             muted
@@ -138,15 +145,24 @@ export const Section2 = () => {
                                     ? selectedImage
                                     : 'https://media.istockphoto.com/id/1266094665/vector/white-online-play-video-icon-isolated-with-long-shadow-film-strip-with-play-sign-red-circle.jpg?s=612x612&w=0&k=20&c=ZVrOVnzTu_xEvzuXaRdCPk3lxwA7UMPSBeIGH3il1vg='
                             }
-                            style={{ borderRadius: '8px' }}
+                            style={{
+                                borderRadius: '8px',
+                                objectFit: 'cover',
+                                width: '100%',
+                                height: '100%',
+                            }}
                         >
-                            {selectedImage && (
-                                <source
-                                    src={video}
-                                    type='video/mp4'
-                                />
-                            )}
-                        </video>
+                            {selectedImage &&
+                           
+                                 (
+                                    <source
+                                        // src={selectedImage === imgAv1 ? vidAv1: selectedImage === imgAv2 ? vidAv2 : vidAv3}
+                                        src={vidAv3}
+                                        type='video/webm'
+                                    />
+                                )
+                            }
+                        </Box>
                     </Paper>
                 </Grid>
             </Grid>

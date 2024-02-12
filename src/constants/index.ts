@@ -1,3 +1,9 @@
+import av1 from '../assets/av1.png'
+import av2 from '../assets/av2.jpg'
+import av3 from '../assets/av3.jpg'
+import av4 from '../assets/av4.png'
+import av5 from '../assets/av5.jpg'
+
 export const productImages = [
     {
         img: 'https://rukminim2.flixcart.com/image/416/416/xif0q/dress/w/t/e/l-pltdr150multi-pretty-loving-thing-original-imagsardhajnxtdf.jpeg?q=70&crop=false',
@@ -44,25 +50,24 @@ export type AIAvatar = {
 export const avatarImages = [
     {
         name: 'av1',
-        image: 'https://img.freepik.com/free-photo/front-portrait-woman-with-beauty-face_186202-6146.jpg?size=626&ext=jpg&ga=GA1.1.28377136.1707629094&semt=ais',
+        image: av1,
     },
     {
         name: 'av2',
-        image: 'https://img.freepik.com/free-photo/beautiful-face-young-woman-with-clean-fresh-skin-isolated-white_186202-7897.jpg?size=626&ext=jpg&ga=GA1.1.28377136.1707629094&semt=ais',
+        image: av2,
     },
     {
         name: 'av3',
-        image: 'https://img.freepik.com/free-photo/portrait-young-beautiful-woman-with-fresh-clean-skin-isolated-white_186202-1721.jpg?size=626&ext=jpg&ga=GA1.1.28377136.1707629094&semt=ais',
+        image: av3,
     },
     {
         name: 'av4',
-        image: 'https://img.freepik.com/premium-photo/close-up-young-beautiful-natural-hispanic-woman_1187-60316.jpg?size=626&ext=jpg&ga=GA1.1.28377136.1707629094&semt=aishttps://img.freepik.com/free-photo/beautiful-face-young-woman-with-clean-fresh-skin-isolated-white_186202-7897.jpg?size=626&ext=jpg&ga=GA1.1.28377136.1707629094&semt=ais',
+        image: av4,
     },
     {
         name: 'av5',
-        image: 'https://img.freepik.com/free-photo/beautiful-woman-white-background_144627-7786.jpg?size=626&ext=jpg&ga=GA1.1.28377136.1707629094&semt=ais',
+        image: av5,
     },
-   
 ];
 
 export const productDescription = `
@@ -84,5 +89,8 @@ Sleeve: Noodle strap
   `;
 
 export const productScript = `
-  the Classic Cotton Shirt. It's not just clothing; it's a perfect harmony of style, comfort, and versatility. Picture this: premium cotton fabric that wraps you in pure comfort, a classic fit that effortlessly suits any occasion, and a palette of colors to match your unique style. This shirt is your daily dose of confidence and expression. Whether you're out for a casual day or a formal gathering, it adapts seamlessly. Emphasizing comfort and breathability, it's your go-to in any weather. Just a heads up, color availability might sway with the trends. Elevate your wardrobe, make a statement with the Classic Cotton Shirt – because style should always be as comfortable as it is chic. 
+The resort dress is a true gem, featuring a delightful tie-on detail at the front that adds a touch of sophistication to your look.
+With its flowing maxi length, this dress exudes an elegant charm, making it perfect for those summer getaways or beachside soirées.
+The noodle straps – not only do they contribute to the dress's graceful silhouette, but they also provide a comfortable and breezy fit.
+The side slits are a thoughtful addition, ensuring ease of walking and adding a subtle hint of allure to your ensemble.
   `;

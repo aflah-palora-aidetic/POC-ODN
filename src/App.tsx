@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Section1 } from './sections/Section1';
 import { useState } from 'react';
 import { Section2, Section3 } from './sections';
+import vidAv3 from './assets/av3_vid.webm'
 
 function App() {
     const [currentSection, setCurrentSection] = useState<number>(1);
@@ -13,9 +14,15 @@ function App() {
         setCurrentSection(sec => sec - 1)
     }
     const handleNext = () => {
-        if(currentSection === 3) alert('Downloading ...');
-        else setCurrentSection(sec => sec + 1)
-    }
+        if (currentSection === 3) {
+            const a = document.createElement('a');
+            a.href = vidAv3;
+            a.download = vidAv3.split('/').pop() as string;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        } else setCurrentSection((sec) => sec + 1);
+    };
 
     return (
         <Grid
