@@ -3,30 +3,30 @@ import { Grid, Paper, Typography } from '@mui/material';
 import { avatarImages, productScript } from '../constants';
 import { MinHeightTextarea } from '../components/DescriptionComponent';
 import { SelectableImageList } from '../components/AvatarSelector';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CustomizedSteppers } from '../components/Stepper';
 import video from '../assets/video.mp4';
 
 export const Section2 = () => {
-
     const [selectedImage, setSelectedImage] = useState<string>('');
+    const [script, setScript] = useState<string>('');
 
     const handleImageSelect = (selected: string) => {
-        setSelectedImage(selected)
+        setSelectedImage(selected);
     };
+
+    useEffect(() => {
+        setTimeout(() => {
+            setScript(productScript);
+        }, 500);
+    }, []);
 
     return (
         <>
-            {/* <Grid item>
-                <Typography
-                    textAlign={'center'}
-                    variant='h4'
-                    fontFamily={'sans-serif'}
-                >
-                    Step 2: Select Avatar & Preview the output
-                </Typography>
-            </Grid> */}
-            <Grid item width={'80%'}>
+            <Grid
+                item
+                width={'80%'}
+            >
                 <CustomizedSteppers currentSection={1} />
             </Grid>
             <Grid
@@ -35,15 +35,15 @@ export const Section2 = () => {
                 flexWrap={'nowrap'}
                 gap={1}
                 sx={{
-					overflow: 'auto',
-					scrollbarWidth: 'thin', // For Firefox
-					scrollbarColor: 'transparent transparent', // For Firefox
-					'&::-webkit-scrollbar': {
-						width: '0px',
-					},
-					'&::-webkit-scrollbar-thumb': {
-						backgroundColor: 'transparent',
-					},
+                    overflow: 'auto',
+                    scrollbarWidth: 'thin', // For Firefox
+                    scrollbarColor: 'transparent transparent', // For Firefox
+                    '&::-webkit-scrollbar': {
+                        width: '0px',
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        backgroundColor: 'transparent',
+                    },
                 }}
             >
                 <Grid
@@ -76,8 +76,16 @@ export const Section2 = () => {
                             }}
                         >
                             {/* <SelectableImageList avatars={avatarImages} /> */}
-                            <Typography variant='h6' textAlign={'center'} >Select an Avatar</Typography>
-                            <SelectableImageList onSelect={handleImageSelect} items={avatarImages}/>
+                            <Typography
+                                variant='h6'
+                                textAlign={'center'}
+                            >
+                                Select an Avatar
+                            </Typography>
+                            <SelectableImageList
+                                onSelect={handleImageSelect}
+                                items={avatarImages}
+                            />
                         </Grid>
                     </Paper>
                     <Grid
@@ -98,8 +106,8 @@ export const Section2 = () => {
                         }}
                     >
                         <MinHeightTextarea
-                        handleChange={() => {}}
-                            value={productScript}
+                            value={script}
+                            placeholder='Generating script...'
                             minRows={20}
                         />
                     </Grid>
@@ -113,28 +121,31 @@ export const Section2 = () => {
                     <Paper
                         elevation={3}
                         style={{ borderRadius: '8px' }}
-                        sx={
-                            {
-                                // backgroundColor: 'blue',
-                                width: '100%',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }
-                        }
+                        sx={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
                     >
                         <video
                             autoPlay
                             loop
                             muted
                             controls
-                            poster={selectedImage ? selectedImage : 'https://media.istockphoto.com/id/1266094665/vector/white-online-play-video-icon-isolated-with-long-shadow-film-strip-with-play-sign-red-circle.jpg?s=612x612&w=0&k=20&c=ZVrOVnzTu_xEvzuXaRdCPk3lxwA7UMPSBeIGH3il1vg='}
-                            style={{borderRadius: '8px'}}
+                            poster={
+                                selectedImage
+                                    ? selectedImage
+                                    : 'https://media.istockphoto.com/id/1266094665/vector/white-online-play-video-icon-isolated-with-long-shadow-film-strip-with-play-sign-red-circle.jpg?s=612x612&w=0&k=20&c=ZVrOVnzTu_xEvzuXaRdCPk3lxwA7UMPSBeIGH3il1vg='
+                            }
+                            style={{ borderRadius: '8px' }}
                         >
-                            {selectedImage && <source
-                                src={video}
-                                type='video/mp4'
-                            />}
+                            {selectedImage && (
+                                <source
+                                    src={video}
+                                    type='video/mp4'
+                                />
+                            )}
                         </video>
                     </Paper>
                 </Grid>

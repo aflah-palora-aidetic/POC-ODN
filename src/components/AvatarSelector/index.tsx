@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { ListItemText, Grid, Box } from '@mui/material';
+import { Grid, Box, Typography } from '@mui/material';
 import { AIAvatar } from '../../constants';
 
 export const SelectableImageList: FC<{
@@ -24,7 +24,13 @@ export const SelectableImageList: FC<{
                     item
                     key={item.name}
                     onClick={() => handleItemClick(item)}
-                    border={selectedItem === item ? '1px solid blue' : ''}
+                    border={selectedItem === item ? '1px solid #b2cfff' : ''}
+                    borderRadius={2}
+                    sx={{
+                        '&:hover': {
+                            backgroundColor: '#bbc9ff',
+                        },
+                    }}
                 >
                     <Box
                         component={'img'}
@@ -34,7 +40,12 @@ export const SelectableImageList: FC<{
                         alt={item.name}
                         src={item.image}
                     />
-                    <ListItemText primary={item.name} />
+                    <Typography
+                        variant='subtitle1'
+                        textAlign={'center'}
+                    >
+                        {item.name}
+                    </Typography>
                 </Grid>
             ))}
         </Grid>

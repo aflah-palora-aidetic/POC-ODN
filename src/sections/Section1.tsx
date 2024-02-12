@@ -18,10 +18,10 @@ export const Section1 = () => {
     const [loading, setLoading] = useState(false);
 
     const handleDescriptionChange = (desc: string) => {
-        console.log('🚀 ~ handleDescriptionChange ~ desc:', desc)
+        console.log('🚀 ~ handleDescriptionChange ~ desc:', desc);
         setProductDescriptionInput(desc);
     };
-    
+
     useEffect(() => {
         if (!pastedURL || pastedURL === '') {
             setImages(dummyProductImages);
@@ -38,12 +38,15 @@ export const Section1 = () => {
                 setImages(productImages);
             }, 2500);
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [loading]);
 
     return (
         <>
-            <Grid item width={'80%'}>
+            <Grid
+                item
+                width={'80%'}
+            >
                 <CustomizedSteppers currentSection={0} />
             </Grid>
 
@@ -87,7 +90,6 @@ export const Section1 = () => {
                             </Grid>
                             <MinHeightTextarea
                                 value={productDescriptionInput}
-                                handleChange={handleDescriptionChange}
                                 disabled={loading}
                                 placeholder={loading ? 'Fetching Product Details...' : ''}
                             />

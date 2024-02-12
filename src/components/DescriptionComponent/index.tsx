@@ -7,10 +7,9 @@ interface Props {
     value?: string;
     disabled?: boolean;
     placeholder?: string;
-    handleChange: (value: string) => void;
 }
 
-export const MinHeightTextarea: React.FC<Props> = ({ minRows, value, disabled, placeholder, handleChange }) => {
+export const MinHeightTextarea: React.FC<Props> = ({ minRows, value, disabled, placeholder }) => {
     const blue = {
         100: '#DAECFF',
         200: '#b6daff',
@@ -71,12 +70,8 @@ export const MinHeightTextarea: React.FC<Props> = ({ minRows, value, disabled, p
             aria-label='minimum height'
             minRows={minRows ?? 25}
             placeholder={placeholder ? placeholder : 'Product description...'}
-            value={value}
+            defaultValue={value}
             disabled={disabled}
-            onChange={(e) => {
-                // e.preventDefault();
-                handleChange(e.target.value);
-            }}
         />
     );
 };
