@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { Section1 } from './sections/Section1';
 import { useState } from 'react';
 import { Section2, Section3 } from './sections';
-import vidAv3 from './assets/av3_vid.webm'
+import final from './assets/final.mp4'
 
 function App() {
     const [currentSection, setCurrentSection] = useState<number>(1);
@@ -16,8 +16,8 @@ function App() {
     const handleNext = () => {
         if (currentSection === 3) {
             const a = document.createElement('a');
-            a.href = vidAv3;
-            a.download = vidAv3.split('/').pop() as string;
+            a.href = final;
+            a.download = final.split('/').pop() as string;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -82,8 +82,8 @@ function App() {
                         paddingY={3}
                         gap={2}
                         >
-                        <Button variant='contained' disabled={currentSection===1} onClick={handlePrevious}>Previous</Button>
-                        <Button variant='contained' onClick={handleNext}>{currentSection===3 ? 'Download' : 'Next'}</Button>
+                        <Button variant='outlined' size='small' disabled={currentSection===1} onClick={handlePrevious}>Previous</Button>
+                        <Button variant='outlined' size='small' onClick={handleNext}>{currentSection===3 ? 'Download' : 'Next'}</Button>
                     </Grid>
                 </Grid>
             </Grid>

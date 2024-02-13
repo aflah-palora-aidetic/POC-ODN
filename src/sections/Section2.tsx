@@ -30,6 +30,7 @@ export const Section2 = () => {
             <Grid
                 item
                 width={'80%'}
+                padding={1}
             >
                 <CustomizedSteppers currentSection={1} />
             </Grid>
@@ -37,7 +38,8 @@ export const Section2 = () => {
                 container
                 flexGrow={1}
                 flexWrap={'nowrap'}
-                // gap={1}
+                padding={3}
+                gap={1}
                 sx={{
                     overflow: 'auto',
                     scrollbarWidth: 'thin', // For Firefox
@@ -138,7 +140,7 @@ export const Section2 = () => {
                             component={'video'}
                             autoPlay
                             loop
-                            muted
+                            // muted
                             controls
                             poster={
                                 selectedImage

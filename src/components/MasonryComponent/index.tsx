@@ -3,6 +3,7 @@ import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
 import { FC, useEffect, useState } from 'react';
 import { productImages } from '../../constants';
+import { Grid, Skeleton } from '@mui/material';
 
 interface Props {
     images: {
@@ -10,9 +11,10 @@ interface Props {
         title: string;
     }[];
     onChange: (value: string[]) => void;
+    loading?: boolean;
 }
 
-export const MasonryComponent: FC<Props> = ({ images, onChange }) => {
+export const MasonryComponent: FC<Props> = ({ images, onChange, loading }) => {
     const [selectedImages, setSelectedImages] = useState<string[]>(productImages?.map((el) => el?.img));
 
     useEffect(() => {
@@ -25,12 +27,18 @@ export const MasonryComponent: FC<Props> = ({ images, onChange }) => {
             <Paper
                 elevation={3}
                 style={{ padding: '20px', borderRadius: '8px' }}
-                sx={{ height: '93%'}}
+                sx={{ height: '93%' }}
+                
             >
-                <Masonry
+                { loading ? (
+                    <Grid container gap={4} justifyContent={'center'}>
+                    <Skeleton variant="rectangular" sx={{borderRadius: '8px'}} width={150} height={200} />
+                    <Skeleton variant="rectangular" sx={{borderRadius: '8px'}} width={150} height={200} />
+                    <Skeleton variant="rectangular" sx={{borderRadius: '8px'}} width={150} height={200} />
+                    </Grid>
+                ) : (<Masonry
                     columns={3}
                     spacing={2}
-                    // sx={{flexFlow: 'nowrap'}}
                 >
                     {images?.map((item, index) => (
                         <div key={index}>
@@ -46,7 +54,7 @@ export const MasonryComponent: FC<Props> = ({ images, onChange }) => {
                                     objectFit: 'cover',
                                     margin: 0
                                 }}
-                                border={selectedImages?.includes(item?.img) ? '1px solid #a1a1ff' : ''}
+                                border={selectedImages?.includes(item?.img) ? '2px solid #c8c800' : '2px solid transparent'}
                                 borderRadius={'7px'}
                                 onClick={() => {
                                     setSelectedImages((prev) => (prev?.includes(item?.img) ? prev?.filter((el) => el !== item?.img) : [...prev, item?.img]));
@@ -54,7 +62,7 @@ export const MasonryComponent: FC<Props> = ({ images, onChange }) => {
                             ></Box>
                         </div>
                     ))}
-                </Masonry>
+                </Masonry>)}
             </Paper>
         </Box>
     );

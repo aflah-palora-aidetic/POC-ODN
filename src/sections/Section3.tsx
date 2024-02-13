@@ -1,6 +1,6 @@
-import { Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { CustomizedSteppers } from '../components/Stepper';
-import vidAv3 from '../assets/av3_vid.webm'
+import final from '../assets/final.mp4'
 import imgAv3 from '../assets/av3.jpg'
 
 export const Section3 = () => {
@@ -9,31 +9,33 @@ export const Section3 = () => {
             <Grid
                 item
                 width={'80%'}
+                padding={1}
             >
                 <CustomizedSteppers currentSection={2} />
             </Grid>
             <Grid
                 item
                 flexGrow={1}
+                height={'460px'}
             >
-                <video
+                <Box
+                    component={'video'}
                     autoPlay
                     loop
-                    muted
                     controls
                     poster={imgAv3}
                     style={{
                         borderRadius: '8px',
                         objectFit: 'cover',
-                        width: '500px',
+                        width: '100%',
                         height: '100%',
                     }}
                 >
                     <source
-                        src={vidAv3}
+                        src={final}
                         type='video/webm'
                     />
-                </video>
+                </Box>
             </Grid>
         </>
     );

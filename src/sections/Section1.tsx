@@ -41,6 +41,7 @@ export const Section1 = () => {
             <Grid
                 item
                 width={'80%'}
+                padding={1}
             >
                 <CustomizedSteppers currentSection={0} />
             </Grid>
@@ -48,7 +49,7 @@ export const Section1 = () => {
             <Grid
                 item
                 container
-                gap={2}
+                gap={1}
                 paddingX={2}
                 flexGrow={1}
             >
@@ -102,6 +103,7 @@ export const Section1 = () => {
                         onChange={(selectedImages) => {
                             console.log({ selectedImages });
                         }}
+                        loading={loading}
                     />
                 </Grid>
             </Grid>
