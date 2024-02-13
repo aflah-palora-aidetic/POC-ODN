@@ -9,7 +9,7 @@ import { CustomizedSteppers } from '../components/Stepper';
 // import vidAv2 from '../assets/av2_vid.webm'
 import vidAv3 from '../assets/av3_vid.webm'
 // import imgAv1 from '../assets/av1.png'
-// import imgAv2 from '../assets/av2.jpg'
+import imgAv3 from '../assets/av3.jpg'
 
 export const Section2 = () => {
     const [selectedImage, setSelectedImage] = useState<string>('');
@@ -142,11 +142,7 @@ export const Section2 = () => {
                             loop
                             // muted
                             controls
-                            poster={
-                                selectedImage
-                                    ? selectedImage
-                                    : 'https://media.istockphoto.com/id/1266094665/vector/white-online-play-video-icon-isolated-with-long-shadow-film-strip-with-play-sign-red-circle.jpg?s=612x612&w=0&k=20&c=ZVrOVnzTu_xEvzuXaRdCPk3lxwA7UMPSBeIGH3il1vg='
-                            }
+                            poster={imgAv3}
                             style={{
                                 borderRadius: '8px',
                                 objectFit: 'cover',
