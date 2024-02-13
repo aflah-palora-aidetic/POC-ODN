@@ -28,7 +28,7 @@ export const SelectableImageList: FC<{
                     borderRadius={2}
                     sx={{
                         '&:hover': {
-                            backgroundColor: '#c8c800',
+                            backgroundColor: 'rgb(255 255 189)',
                         },
                         objectFit: 'cover'
                     }}
