@@ -12,7 +12,7 @@ import vidAv3 from '../assets/av3_vid.webm'
 import imgAv3 from '../assets/av3.jpg'
 
 export const Section2 = () => {
-    const [selectedImage, setSelectedImage] = useState<string>('');
+    const [selectedImage, setSelectedImage] = useState<string>(imgAv3);
     const [script, setScript] = useState<string>('');
 
     const handleImageSelect = (selected: string) => {
@@ -138,11 +138,9 @@ export const Section2 = () => {
                     >
                         <Box
                             component={'video'}
-                            autoPlay
                             loop
-                            // muted
                             controls
-                            poster={imgAv3}
+                            poster={selectedImage}
                             style={{
                                 borderRadius: '8px',
                                 objectFit: 'cover',

@@ -50,7 +50,7 @@ export type AIAvatar = {
 export const avatarImages = [
     {
         name: 'av1',
-        image: av1,
+        image: av3,
     },
     {
         name: 'av2',
@@ -58,7 +58,7 @@ export const avatarImages = [
     },
     {
         name: 'av3',
-        image: av3,
+        image: av1,
     },
     {
         name: 'av4',
@@ -88,9 +88,4 @@ Neck: One Shoulder
 Sleeve: Noodle strap
   `;
 
-export const productScript = `
-The resort dress is a true gem, featuring a delightful tie-on detail at the front that adds a touch of sophistication to your look.
-With its flowing maxi length, this dress exudes an elegant charm, making it perfect for those summer getaways or beachside soirées.
-The noodle straps – not only do they contribute to the dress's graceful silhouette, but they also provide a comfortable and breezy fit.
-The side slits are a thoughtful addition, ensuring ease of walking and adding a subtle hint of allure to your ensemble.
-  `;
+export const productScript = `The resort dress is a true gem, featuring a delightful tie-on detail at the front that adds a touch of sophistication to your look. With its flowing maxi length, this dress exudes an elegant charm, making it perfect for those summer getaways or beachside soirées. The noodle straps – not only do they contribute to the dress's graceful silhouette, but they also provide a comfortable and breezy fit. The side slits are a thoughtful addition, ensuring ease of walking and adding a subtle hint of allure to your ensemble.`;
