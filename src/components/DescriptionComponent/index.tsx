@@ -7,9 +7,10 @@ interface Props {
     value?: string;
     disabled?: boolean;
     placeholder?: string;
+    fontSize?: number;
 }
 
-export const MinHeightTextarea: React.FC<Props> = ({ minRows, value, disabled, placeholder }) => {
+export const MinHeightTextarea: React.FC<Props> = ({ minRows, value, disabled, placeholder, fontSize }) => {
     const blue = {
         100: '#DAECFF',
         200: '#b6daff',
@@ -72,7 +73,7 @@ export const MinHeightTextarea: React.FC<Props> = ({ minRows, value, disabled, p
             placeholder={placeholder ? placeholder : 'Product description...'}
             defaultValue={value}
             disabled={disabled}
-            sx={{ fontSize: '24px' }}
+            sx={{ fontSize: fontSize ?? '24px', color: '#3a3a3a' }}
         />
     );
 };

@@ -70,8 +70,7 @@ export const avatarImages = [
     },
 ];
 
-export const productDescription = `
-Product: PRETTY LOVING THING 
+export const productDescription = `Product: PRETTY LOVING THING 
 Women A-line Multicolor Dress
 
 Color: Multicolor
@@ -85,7 +84,6 @@ Suitable For: Western Wear
 Sleeve Length: Sleeveless
 Pack of: 1
 Neck: One Shoulder
-Sleeve: Noodle strap
-  `;
+Sleeve: Noodle strap`;
 
 export const productScript = `This resort dress is a gem with a front tie for sophistication. A flowing maxi length for elegant charm - ideal for summer getaways or beach-side events. Noodle straps enhance the graceful silhouette, offering comfort, while side slits add allure and ease of walking.`;

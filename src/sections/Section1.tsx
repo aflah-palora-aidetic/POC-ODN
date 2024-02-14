@@ -88,6 +88,7 @@ export const Section1 = () => {
                                 value={productDescriptionInput}
                                 disabled={loading}
                                 placeholder={loading ? 'Fetching Product Details...' : ''}
+                                minRows={14.5}
                             />
                         </Grid>
                     </Paper>
