@@ -16,7 +16,7 @@ export const Section3 = () => {
             <Grid
                 item
                 flexGrow={1}
-                height={'460px'}
+                height={'660px'}
             >
                 <Box
                     component={'video'}

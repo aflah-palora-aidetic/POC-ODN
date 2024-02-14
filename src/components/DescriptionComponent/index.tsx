@@ -68,10 +68,11 @@ export const MinHeightTextarea: React.FC<Props> = ({ minRows, value, disabled, p
     return (
         <Textarea
             aria-label='minimum height'
-            minRows={minRows ?? 25}
+            minRows={minRows ?? 16}
             placeholder={placeholder ? placeholder : 'Product description...'}
             defaultValue={value}
             disabled={disabled}
+            sx={{ fontSize: '24px' }}
         />
     );
 };

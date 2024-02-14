@@ -88,4 +88,4 @@ Neck: One Shoulder
 Sleeve: Noodle strap
   `;
 
-export const productScript = `The resort dress is a true gem, featuring a delightful tie-on detail at the front that adds a touch of sophistication to your look. With its flowing maxi length, this dress exudes an elegant charm, making it perfect for those summer getaways or beachside soirées. The noodle straps – not only do they contribute to the dress's graceful silhouette, but they also provide a comfortable and breezy fit. The side slits are a thoughtful addition, ensuring ease of walking and adding a subtle hint of allure to your ensemble.`;
+export const productScript = `This resort dress is a gem with a front tie for sophistication. A flowing maxi length for elegant charm - ideal for summer getaways or beach-side events. Noodle straps enhance the graceful silhouette, offering comfort, while side slits add allure and ease of walking.`;

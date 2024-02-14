@@ -5,10 +5,7 @@ import { MinHeightTextarea } from '../components/DescriptionComponent';
 import { SelectableImageList } from '../components/AvatarSelector';
 import { useEffect, useState } from 'react';
 import { CustomizedSteppers } from '../components/Stepper';
-// import vidAv1 from '../assets/av1_vid.webm'
-// import vidAv2 from '../assets/av2_vid.webm'
-import vidAv3 from '../assets/av3_vid.webm'
-// import imgAv1 from '../assets/av1.png'
+import vidAv3 from '../assets/av3_vid.mp4'
 import imgAv3 from '../assets/av3.jpg'
 
 export const Section2 = () => {
@@ -22,7 +19,7 @@ export const Section2 = () => {
     useEffect(() => {
         setTimeout(() => {
             setScript(productScript);
-        }, 2500);
+        }, 1500);
     }, []);
 
     return (
@@ -69,6 +66,7 @@ export const Section2 = () => {
                             // flex={1}
                             maxHeight={'35vh'}
                             overflow={'auto'}
+                            mb={2}
                             sx={{
                                 overflow: 'auto',
                                 scrollbarWidth: 'thin', // For Firefox
@@ -81,10 +79,10 @@ export const Section2 = () => {
                                 },
                             }}
                         >
-                            {/* <SelectableImageList avatars={avatarImages} /> */}
                             <Typography
-                                variant='h6'
+                                variant='h4'
                                 textAlign={'center'}
+                                my={2}
                             >
                                 Select an Avatar
                             </Typography>
@@ -114,7 +112,7 @@ export const Section2 = () => {
                         <MinHeightTextarea
                             value={script}
                             placeholder='Generating the script...'
-                            minRows={20}
+                            minRows={8.5}
                         />
                     </Grid>
                 </Grid>
@@ -122,7 +120,6 @@ export const Section2 = () => {
                     item
                     container
                     flex={1}
-                    // bgcolor={'red'}
                 >
                     <Paper
                         elevation={3}
